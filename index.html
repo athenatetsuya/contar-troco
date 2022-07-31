@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>
+			<input type="number" id="dinheiro" placeholder="Dinheiro" /> <br />
+			<input type="number" id="valorProduto" placeholder="Valor Produto" />
+			<br />
+			<br />
+			<button onclick="gerarTroco()">CONVERTER</button> <br />
+			<div id="mostrarValores"></div>
+		</div>
+		<script>
+			var elementDinheiro = document.getElementById("dinheiro");
+			var elementValorProduto = document.getElementById("valorProduto");
+			var elementDiv = document.getElementById("mostrarValores");
+
+			function gerarTroco() {
+				var valorDinheiro = elementDinheiro.value;
+				var valorProduto = elementValorProduto.value;
+				var valorTroco = valorDinheiro - valorProduto;
+				elementDiv.append(valorTroco);
+			}
+		</script>
+	</body>
+</html>
